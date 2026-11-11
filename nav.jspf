@@ -1,0 +1,10 @@
+<header class="topbar">
+  <a class="brand" href="events.jsp"><span class="logo"></span>Campus Events</a>
+  <nav>
+    <a href="events.jsp">Events</a>
+    <a href="my-events.jsp">My registrations</a>
+    <% if ("ADMIN".equals(role)) { %><a href="admin.jsp">Manage events</a><% } %>
+    <span class="user"><%= esc((String) session.getAttribute("userName")) %></span>
+    <a class="logout" href="auth?action=logout">Log out</a>
+  </nav>
+</header>
